@@ -1,0 +1,69 @@
+.chatContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  
+  .messageList {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; /* push the messages to the bottom */
+  }
+  
+  .userMessage, .botMessage {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    clear: both;
+  }
+  
+  .userMessage {
+    background-color: #0084ff;
+    color: white;
+    float: right;
+  }
+  
+  .botMessage {
+    background-color: #eee;
+    float: left;
+  }
+  
+  .chatInput {
+    width: 75%; /* decrease the width to 75% */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    flex-shrink: 0; /* prevent the input from shrinking */
+  }
+  
+  .chatButton {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0084ff;
+    color: white;
+    cursor: pointer;
+    flex-shrink: 1; /* allow the button to shrink */
+  }
+  
+  @media screen and (max-width: 600px) {
+    .chatContainer {
+      padding: 10px;
+    }
+  
+    .chatInput {
+      width: 65%; /* decrease the width to 65% on small screens */
+    }
+  
+    .chatButton {
+      padding: 5px 10px;
+    }
+  }
